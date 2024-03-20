@@ -53,12 +53,18 @@ function Landing() {
         <h1 className='text-2xl md:text-5xl lg:text-7xl font-bold  text-center '>
           Promoting Morality and Public Order According to the Islamic Teachings
         </h1>
-      <div className='text-sm md:text-md lg:text-lg mt-3 md:mt-6 text-center text-gray-600'>Safeguarding our communities through guidance, education, and enforcement.</div>
+        <div className='text-sm md:text-md lg:text-lg mt-3 md:mt-6 text-center text-gray-600'>
+          Safeguarding our communities through guidance, education, and
+          enforcement.
+        </div>
       </div>
       <div className='flex flex-col md:flex-row items-center justify-center mt-3 gap-3 md:gap-6 md:mt-5'>
-      <button className='bg-[#20665C] px-6 font-bold rounded-full py-2.5 w-60 text-sm text-white'>Join Our Community</button>
-      <button className='border-2 border-[#20665C] font-bold px-6 rounded-full w-60 py-2.5 text-sm text-[#20665C]'>Read Our Blog</button>
-
+        <button className='bg-[#20665C] px-6 font-bold rounded-full py-2.5 w-60 text-sm text-white'>
+          Join Our Community
+        </button>
+        <button className='border-2 border-[#20665C] font-bold px-6 rounded-full w-60 py-2.5 text-sm text-[#20665C]'>
+          Read Our Blog
+        </button>
       </div>
     </div>
   );
