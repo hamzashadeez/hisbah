@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import Mission from "./Mission";
 import About from "./About";
 import Gallery from "./Gallery";
+import Blog from "./Blog";
 
 function Landing() {
   const [show, setShow] = useState(false);
@@ -142,6 +143,8 @@ function Landing() {
        <Mission />
       </div>
       <Gallery />
+        
+      <Blog />
       <Footer />
     </div>
   );
