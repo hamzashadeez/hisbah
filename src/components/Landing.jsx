@@ -146,6 +146,19 @@ function Landing() {
         
       <Blog />
       <Footer />
+      <div className="my-16">
+      <h4 className="text-center text-lg">
+      Powered By{' '}
+      <a
+        target="_blank"
+        rel="noopener noreferrer" // Added for security
+        href="https://synergates.ng" // Include the full URL with "https://"
+        className="font-bold text-teal-700"
+      >
+        Synergates
+      </a>
+    </h4>
+      </div>
     </div>
   );
 }
