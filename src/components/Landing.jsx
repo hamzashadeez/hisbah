@@ -123,12 +123,12 @@ function Landing() {
           </div>
         </div>
         <div className='flex flex-col md:flex-row items-center justify-center mt-3 gap-3 md:gap-6 md:mt-5'>
-          <button className='bg-[#20665C] px-6 font-bold rounded-full py-2.5 w-60 text-sm text-white'>
+          <Link to={"/join"} className='bg-[#20665C] px-6 text-center font-bold rounded-full py-2.5 w-60 text-sm text-white'>
             Join Our Community
-          </button>
-          <button className='border-2 border-[#20665C] font-bold px-6 rounded-full w-60 py-2.5 text-sm text-[#20665C]'>
+          </Link>
+          <Link to="#" className='border-2 border-[#20665C] text-center font-bold px-6 rounded-full w-60 py-2.5 text-sm text-[#20665C]'>
             Read Our Blog
-          </button>
+          </Link>
         </div>
       </main>
       {/* ABOUT */}
