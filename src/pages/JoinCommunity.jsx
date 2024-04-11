@@ -1,8 +1,35 @@
 import React, { useState } from "react";
 import * as Yup from "yup";
 import { katsinaLgas } from "../lib/lga";
+import { supabase } from "../lib/supabase";
+import Modal from "react-modal";
+import Lottie from "react-lottie";
+import animationData from "../assets/Success.json";
+import { useNavigate } from "react-router-dom";
+
+const defaultOptions = {
+  loop: true, // Set to true for continuous animation
+  autoplay: true, // Set to true for automatic playback
+  animationData, // Replace with animation data (local or URL)
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice", // Adjust aspect ratio as needed
+  },
+};
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
 
 function JoinCommunity() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -41,6 +68,17 @@ function JoinCommunity() {
       await validationSchema.validate(formData, { abortEarly: false });
       // Form data is valid, submit the form here
       console.log("Form submitted successfully!", formData);
+      const { data, error } = await supabase
+        .from("members") // Replace with your table name
+        .insert([formData]);
+      setIsOpen(true);
+
+      if (error) {
+        console.log(error);
+        alert("Request is not successful at the moment");
+        throw error; // Re-throw for error handling
+      }
+
       setFormData({
         name: "",
         email: "",
@@ -61,8 +99,24 @@ function JoinCommunity() {
     }
   };
 
+  let subtitle;
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    subtitle.style.color = "#f00";
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
-    <div className='min-h-screen bg-teal-200 flex items-center justify-center'>
+    <div className='min-h-screen bg-gray-200 pt-12 md:pt-4 flex items-center justify-center'>
       <div className='p-4 bg-white rounded-lg shadow-md w-4/5 mx-auto md:w-3/5'>
         <div className='mb-5'>
           <p className='text-brand text-[10px] md:text-sm font-semibold'>
@@ -213,7 +267,7 @@ function JoinCommunity() {
                 className={`bg-gray-50 shadow-sm px-3 py-2 outline-teal-600 ${
                   errors.phone ? "border-red-500" : ""
                 }`}
-                value={formData.nin}
+                value={formData.phone}
                 onChange={handleChange}
                 name='phone'
               />
@@ -231,6 +285,27 @@ function JoinCommunity() {
           </button>
         </form>
       </div>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel='Example Modal'
+      >
+        <div className='flex items-center justify-center flex-col p-16'>
+          <Lottie options={defaultOptions} height={400} width={400} />
+          <button
+            onClick={() => {
+              closeModal();
+              navigate("/");
+            }}
+            className='bg-teal-100 px-4 py-1.5 shadow-sm rounded-sm text-teal-700'
+          >
+            Your Request is Successful!
+          </button>
+        </div>
+      </Modal>
     </div>
   );
 }
