@@ -33,7 +33,7 @@ function DashboardLayout({ children }) {
 
   return (
     <div className='bg-gray-50 h-screen flex'>
-      <section className='md:w-1/6 shadow-sm bg-white h-full py-6 px-10'>
+      <section className='hidden lg:block md:w-1/6 shadow-sm bg-white h-full py-6 px-10'>
         <h5 className='text-teal-600 font-bold uppercase text-lg'>
           Hisbah Katsina
         </h5>
@@ -44,13 +44,13 @@ function DashboardLayout({ children }) {
               <Link
                 to={item.route}
                 key={index}
-                className={`text-gray-700 flex items-center gap-3 p-2 rounded-md ${
+                className={`text-gray-700 flex hover:bg-gray-100 items-center gap-3 p-2 rounded-md ${
                   isActive ? "bg-teal-600" : ""
                 }`} // Add/remove background color based on isActive
               >
                 <item.icon color={isActive ? "white" : "#444"} size={22} />
                 <h4
-                  className={`font-semibold text-lg ${
+                  className={`font-semibold text-lg poppins-semibold ${
                     isActive ? "text-white" : ""
                   }`}
                 >
@@ -61,7 +61,7 @@ function DashboardLayout({ children }) {
           })}
         </div>
       </section>
-      <main className='md:w-5/6'>{children}</main>
+      <main className='w-full grow  '>{children}</main>
     </div>
   );
 }
