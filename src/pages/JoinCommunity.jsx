@@ -67,14 +67,15 @@ function JoinCommunity() {
     try {
       await validationSchema.validate(formData, { abortEarly: false });
       // Form data is valid, submit the form here
+      setLoading(true);
       console.log("Form submitted successfully!", formData);
       const { data, error } = await supabase
         .from("members") // Replace with your table name
         .insert([formData]);
       setIsOpen(true);
-
+      setLoading(false);
       if (error) {
-        console.log(error);
+        setLoading(false);
         alert("Request is not successful at the moment");
         throw error; // Re-throw for error handling
       }
@@ -101,6 +102,7 @@ function JoinCommunity() {
 
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
 
   function openModal() {
     setIsOpen(true);
@@ -277,12 +279,15 @@ function JoinCommunity() {
             </div>
           </div>
 
-          <button
+         {loading === false && <button
             type='submit'
-            className='bg-teal-600 text-white px-4 py-2 rounded-md mt-4'
+            className='bg-teal-600  text-white px-4 py-2 rounded-md mt-4'
           >
             Join Community
-          </button>
+          </button>}
+         {loading === true && <div className='bg-teal-50 w-40 text-center text-teal-400 px-4 py-2 rounded-md mt-4'>
+            Loading...
+          </div>}
         </form>
       </div>
 

@@ -34,12 +34,20 @@ function Landing() {
                 Our Mission
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 to='#'
                 className='font-bold text-xl hover:text-teal-400 text-[#20665C]'
               >
                 Blog
+              </Link>
+            </li> */}
+            <li>
+              <Link
+                to='/login'
+                className='font-bold text-xl hover:text-teal-400 text-[#20665C]'
+              >
+                Sign In
               </Link>
             </li>
             <li>
@@ -88,9 +96,9 @@ function Landing() {
           <Link
             onClick={() => setShow(false)}
             className=' text-[18px] lg:text-[16px]  poppins-semibold whitespace-nowrap  text-end text-brand'
-            to={"#"}
+            to={"/login"}
           >
-            Blog
+            Sign In
           </Link>
           
           <Link
