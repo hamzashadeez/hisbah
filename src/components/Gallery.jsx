@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 
 function Gallery() {
   return (
-    <div className="mx-auto max-w-screen-xl px-4  py-8 sm:px-6 sm:py-12 lg:px-16 lg:py-16">
+    <div className="mx-auto w-full md:w-2/3 px-4  py-8 sm:px-6 sm:py-12 lg:px-16 lg:py-16">
         <Carousel autoPlay infiniteLoop>
         {/* <div> */}
             {/* <img src='.slides/01.jpeg' /> */}
@@ -28,6 +28,18 @@ function Gallery() {
         </div>
         <div>
             <img className="z-20" src='./slides/06.jpeg' />
+            {/* <p className='legend'>Legend 2</p> */}
+        </div>
+        <div>
+            <img className="z-20" src='./slides/07.jpg' />
+            {/* <p className='legend'>Legend 2</p> */}
+        </div>
+        <div>
+            <img className="z-20" src='./slides/08.jpg' />
+            {/* <p className='legend'>Legend 2</p> */}
+        </div>
+        <div>
+            <img className="z-20" src='./slides/09.jpg' />
             {/* <p className='legend'>Legend 2</p> */}
         </div>
         </Carousel>
