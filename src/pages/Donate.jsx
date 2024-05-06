@@ -22,7 +22,7 @@ function Donate() {
   const [amount, setAmount] = useState(500);
   const btns = [500, 1000, 2500, 5000];
 
-  const publicKey = "pk_test_de599ceb8ff6558dbe1f1ce793cb4551827bcd08"; // Replace with your Paystack public key
+  const publicKey = "pk_live_f13c0a4c49a0d3c1e5b7da23f4a38d14257c4eaf"; // Replace with your Paystack public key
 
   const config = {
     reference: (new Date()).getTime().toString(), // Unique reference for the transaction
