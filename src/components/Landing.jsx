@@ -9,39 +9,41 @@ import Mission from "./Mission";
 import About from "./About";
 import Gallery from "./Gallery";
 import Blog from "./Blog";
+import Officials from "./Officials";
 
 function Landing() {
   const [show, setShow] = useState(false);
   return (
-    <div className='bg-white min-h-screen relative'>
+    <div id='home' className='bg-white min-h-screen relative'>
       <section className="sticky main_header top-0 left-0">
         <header className='bg-[#F4FFFB] px-4 flex main_header flex-row items-center justify-between md:px-12 lg:px-24 h-24 sm:h-20 shadow-md'>
           <img src={logo} alt='Logo' className='w-20' />
           <ul className='hidden md:flex flex-row gap-6'>
             <li>
-              <Link
-                to='#'
+              <a
+                href='#home'
                 className='font-bold text-xl hover:text-teal-400 text-[#20665C]'
               >
                 Home
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to='#'
+              <a
+                href='#mission'
+                relative="path"
                 className='font-bold text-xl hover:text-teal-400 text-[#20665C]'
               >
                 Our Mission
-              </Link>
+              </a>
             </li>
-            {/* <li>
-              <Link
-                to='#'
+            <li>
+              <a
+                href='#officials'
                 className='font-bold text-xl hover:text-teal-400 text-[#20665C]'
               >
-                Blog
-              </Link>
-            </li> */}
+                Officials
+              </a>
+            </li>
             <li>
               <Link
                 to='/login'
@@ -89,6 +91,7 @@ function Landing() {
             onClick={() => setShow(false)}
             className=' text-[18px] lg:text-[16px]  poppins-semibold whitespace-nowrap  text-end text-brand'
             to={"#mission"}
+            relative="path"
           >
             Our Mission
           </Link>
@@ -149,6 +152,9 @@ function Landing() {
       </div>
       <div id="mission">
        <Mission />
+      </div>
+      <div id="officials">
+       <Officials />
       </div>
       <Gallery />
         
