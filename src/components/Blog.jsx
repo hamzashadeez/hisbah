@@ -3,8 +3,8 @@ import React from "react";
 function Blog() {
   return (
     <div className='mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-      <h3 className='text-teal-800 poppins-bold text-2xl md:text-3xl text-center mt-2'>
-        Our Blogs
+      <h3 className='text-teal-800 poppins-bold text-3xl md:text-5xl mt-2'>
+        Activities
       </h3>
       <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-16'>
         <article className='overflow-hidden rounded-lg shadow transition hover:shadow-lg'>

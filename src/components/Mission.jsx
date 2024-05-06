@@ -14,16 +14,16 @@ function Mission() {
           </div>
 
           <div className='lg:py-24'>
-            <h2 className='text-3xl font-bold sm:text-4xl text-teal-900'>
+            <h2 className='text-3xl font-bold md:text-6xl text-teal-900'>
               Our Mission
             </h2>
 
-            <p className='mt-4 mb-3 poppins-semibold'>
+            <p className='mt-4 mb-3 poppins-semibold md:text-[24px]'>
               Hisbah Katsina is dedicated to promoting and upholding Islamic
               ethics and moral values within Katsina State. We strive to create
               a just and harmonious society by:
             </p>
-            <ul className="text-gray-600 poppins-regular ul">
+            <ul className="text-gray-600 poppins-regular ul md:text-[20px]">
               <li>Encouraging compliance with Islamic law and principles.</li>
               <li>Promoting public decency and morality.</li>
               <li>Safeguarding the well-being of the community.</li>
