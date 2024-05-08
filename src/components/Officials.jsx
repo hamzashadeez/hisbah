@@ -27,7 +27,8 @@ function Officials() {
     
             <OfficialInfo picture={"./kabir.jpg"} name={"S. Kabir"} title="Officer " />
             <OfficialInfo picture={"./AM GUGA.jpg"} name={"A.M GUGA"} title="Officer " />
-            <OfficialInfo />
+            <OfficialInfo picture={"./ict.jpg"} name={"A. Albani"} title="Head ICT " />
+            
             <OfficialInfo />
         </div>
         </div>
