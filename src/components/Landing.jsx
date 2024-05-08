@@ -10,9 +10,13 @@ import About from "./About";
 import Gallery from "./Gallery";
 import Blog from "./Blog";
 import Officials from "./Officials";
+import { CiGlobe } from "react-icons/ci";
+import LanguageChanger from "./ChangeLangBtn";
 
 function Landing() {
   const [show, setShow] = useState(false);
+  const [hero, setHero] = useState("Promoting Morality and Public Order According to the Islamic Teachings")
+  
   return (
     <div id='home' className='bg-white min-h-screen relative'>
       <section className='sticky main_header top-0 left-0'>
@@ -140,14 +144,16 @@ function Landing() {
       </section>
 
       {/* </div> */}
-      <main className='bg-teal-50 pt-16 pb-24 main'>
+      <main className='bg-teal-50 pt-16 pb-24 main relative'>
+        <div className="absolute top-[10%] right-[10%]">
+          <LanguageChanger textToChange={hero} textChange={setHero} />
+        </div>
         <div className='border-2 mt-8 mb-12 w-3/4 md:w-1/2 lg:w-1/5 mx-auto border-[#20665C] text-[#20665C] font-bold text-sm py-1 rounded-full text-center'>
           Muslim Police Katsina Based
         </div>
         <div className='px-4 md:px-12 lg:px-36 flex flex-col items-center justify-center '>
           <h1 className='text-2xl md:text-5xl lg:text-7xl font-bold leading-7 md:leading-9 text-center poppins-bold'>
-            Promoting Morality and Public Order According to the Islamic
-            Teachings
+            {hero}
           </h1>
           <div className='poppins-regular text-sm md:text-md lg:text-lg mt-3 md:mt-6 text-center text-gray-600'>
             Safeguarding our communities through guidance, education, and

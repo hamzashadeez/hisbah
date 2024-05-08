@@ -11,6 +11,7 @@ import DashboardLayout from "./components/DashboardLayout";
 import Donations from "./pages/Donations";
 import Members from "./pages/Members";
 import Reports from "./pages/Reports";
+import Test from "./components/Test";
 
 function App() {
   const [session, setSession] = useState(null);
@@ -29,6 +30,7 @@ function App() {
     <div className='min-h-screen w-full'>
       <Routes>
         <Route path='/' element={<Landing />} />
+        <Route path='/test' element={<Test />} />
         <Route path='/donate' element={<Donate />} />
         <Route path='/join' element={<JoinCommunity />} />
         <Route path='/login' element={<LoginPage />} />
