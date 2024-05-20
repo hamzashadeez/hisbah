@@ -72,6 +72,20 @@ const ContactUS = () => {
           </form>
         </div>
       </div>
+      <div className="text-center items-center mb-10">
+        <div className="justify-left">
+          <h1 className="font-bold text-teal">
+            Visit Hisbah Board Office Katsina State
+          </h1>
+          <p>
+            Opposite 35 Batallion of the Nigerian Army - Natsinta Barracks
+            Katsina, Katsina State
+          </p>
+          <p>
+            <b>Postal Code: </b> 8200231
+          </p>
+        </div>
+      </div>
     </section>
   );
 };
