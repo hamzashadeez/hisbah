@@ -25,6 +25,7 @@ function Story() {
         <h1 className='text-2xl md:text-4xl lg:text-5xl'>
           Lorem ipsum dolor sit amet consectetur laboriosam suscipit nisi minus!
         </h1>
+        <p className="text-gray-500 text-md mt-2">12th May, 2024</p>
         <img
           alt=''
           src='https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
