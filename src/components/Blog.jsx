@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Blog() {
   return (
@@ -15,16 +16,16 @@ function Blog() {
           />
 
           <div className='bg-white p-4 sm:p-6'>
-            <time datetime='2022-10-10' className='block text-xs text-gray-500'>
+            <p  className='block text-xs text-gray-500'>
               {" "}
               10th Jan 2024{" "}
-            </time>
+            </p>
 
-            <a href='#'>
+            <Link  to='/story'>
               <h3 className='mt-0.5 text-lg text-gray-900'>
                 The Importance of Ethical Conduct in Business
               </h3>
-            </a>
+            </Link>
 
             <p className='mt-2 line-clamp-3 text-justify text-sm/relaxed text-gray-500'>
               Building a strong and ethical business fosters trust within the
@@ -45,16 +46,16 @@ function Blog() {
           />
 
           <div className='bg-white p-4 sm:p-6'>
-            <time datetime='2022-10-10' className='block text-xs text-gray-500'>
+            <p className='block text-xs text-gray-500'>
               {" "}
               12th Jan 2024{" "}
-            </time>
+            </p>
 
-            <a href='#'>
+            <Link to='#'>
               <h3 className='mt-0.5 text-lg text-gray-900'>
                 Promoting a Safe and Respectful Public Environment
               </h3>
-            </a>
+            </Link>
 
             <p className='mt-2 line-clamp-3 text-justify text-sm/relaxed text-gray-500'>
               Maintaining a safe and respectful public environment benefits
@@ -76,16 +77,16 @@ function Blog() {
           />
 
           <div className='bg-white p-4 sm:p-6'>
-            <time datetime='2022-10-10' className='block text-xs text-gray-500'>
+            <p  className='block text-xs text-gray-500'>
               {" "}
               20th Feb 2024{" "}
-            </time>
+            </p>
 
-            <a href='#'>
+            <Link to='#'>
               <h3 className='mt-0.5 text-lg text-gray-900'>
                 The Importance of Ethical Conduct in Business
               </h3>
-            </a>
+            </Link>
 
             <p className='mt-2 line-clamp-3 text-justify text-sm/relaxed text-gray-500'>
               Building a strong and ethical business fosters trust within the
