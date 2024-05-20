@@ -12,7 +12,6 @@ import Donations from "./pages/Donations";
 import Members from "./pages/Members";
 import Reports from "./pages/Reports";
 import Test from "./components/Test";
-import ContactUS from "./pages/ContactUs";
 
 function App() {
   const [session, setSession] = useState(null);
@@ -35,7 +34,6 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/join" element={<JoinCommunity />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/contactus" element={<ContactUS />} />
         {/* <Route path="/login" element={session !== null ? <LoginPage /> : <Navigate to="/dashboard" replace />} /> */}
 
         <Route
