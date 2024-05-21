@@ -8,11 +8,11 @@ const ContactUS = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   return (
-    <section className="bg-indigo-50">
-      <div className="container m-auto max-w-2xl py-24">
+    <section className="bg-teal-50">
+      <div className="container m-auto max-w-2xl py-20">
         <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
           <form>
-            <h2 className="text-3xl text-center font-semibold mb-6">
+            <h2 className="text-3xl text-center font-bold sm:text-6xl text-teal-900">
               Contact Us
             </h2>
 
@@ -71,19 +71,19 @@ const ContactUS = () => {
             </div>
           </form>
         </div>
-      </div>
-      <div className="text-center items-center mb-10">
-        <div className="justify-left">
-          <h1 className="font-bold text-teal">
-            Visit Hisbah Board Office Katsina State
-          </h1>
-          <p>
-            Opposite 35 Batallion of the Nigerian Army - Natsinta Barracks
-            Katsina, Katsina State
-          </p>
-          <p>
-            <b>Postal Code: </b> 8200231
-          </p>
+        <div className="text-center items-center mt-10">
+          <div className="text-left">
+            <h6 className="font-bold text-teal-600 mb-5">
+              Visit Hisbah Board Office Katsina State
+            </h6>
+            <p className="mb-5">
+              Opposite 35 Batallion of the Nigerian Army - Natsinta Barracks
+              Katsina, Katsina State.
+            </p>
+            <p>
+              <b>Postal Code: </b> 8200231
+            </p>
+          </div>
         </div>
       </div>
     </section>
