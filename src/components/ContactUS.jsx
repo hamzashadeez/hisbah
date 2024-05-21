@@ -63,7 +63,7 @@ const ContactUS = () => {
                 ></textarea>
               </div>
               <button
-                className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-full w-full"
+                className="mt-1 w-full rounded bg-teal-500 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0"
                 type="submit"
               >
                 Submit
