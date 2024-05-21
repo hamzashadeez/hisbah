@@ -28,18 +28,20 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full">
+    <div className='min-h-screen w-full'>
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/join" element={<JoinCommunity />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/story" element={<Story />} />
+        <Route path='/' element={<Landing />} />
+        <Route path='/test' element={<Test />} />
+        <Route path='/donate' element={<Donate />} />
+        <Route path='/join' element={<JoinCommunity />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/story'>
+          <Route path=':postId' element={<Story />} />
+        </Route>
         {/* <Route path="/login" element={session !== null ? <LoginPage /> : <Navigate to="/dashboard" replace />} /> */}
 
         <Route
-          path="/dashboard"
+          path='/dashboard'
           element={
             <DashboardLayout>
               <Dashboard />
@@ -47,7 +49,7 @@ function App() {
           }
         />
         <Route
-          path="/donations"
+          path='/donations'
           element={
             <DashboardLayout>
               <Donations />
@@ -55,7 +57,7 @@ function App() {
           }
         />
         <Route
-          path="/members"
+          path='/members'
           element={
             <DashboardLayout>
               <Members />
@@ -63,7 +65,7 @@ function App() {
           }
         />
         <Route
-          path="/reports"
+          path='/reports'
           element={
             <DashboardLayout>
               <Reports />
