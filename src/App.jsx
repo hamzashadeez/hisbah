@@ -12,6 +12,7 @@ import Donations from "./pages/Donations";
 import Members from "./pages/Members";
 import Reports from "./pages/Reports";
 import Test from "./components/Test";
+import Story from "./pages/Story";
 
 function App() {
   const [session, setSession] = useState(null);
@@ -34,6 +35,7 @@ function App() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/join" element={<JoinCommunity />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/story" element={<Story />} />
         {/* <Route path="/login" element={session !== null ? <LoginPage /> : <Navigate to="/dashboard" replace />} /> */}
 
         <Route
