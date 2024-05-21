@@ -20,7 +20,7 @@ function Officials() {
   return (
     <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
       <h2 className="text-3xl font-bold sm:text-6xl text-teal-900">
-        Meet Our Teams
+        Meet Our Team
       </h2>
       <div className="grid grid-cols-1 mt-6  md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12">
         <OfficialInfo
