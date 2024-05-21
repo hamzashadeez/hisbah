@@ -51,14 +51,7 @@ function Landing() {
                 Team
               </a>
             </li>
-            <li>
-              <a
-                href="/story"
-                className="font-bold text-xl hover:text-teal-400 text-[#20665C]"
-              >
-                Story
-              </a>
-            </li>
+           
             <li>
               <a
                 href="#contact"

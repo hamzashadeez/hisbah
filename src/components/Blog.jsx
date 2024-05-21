@@ -24,7 +24,7 @@ function Blog() {
             />
 
             <div className='bg-white p-4 sm:p-6'>
-              <p className='block text-xs text-gray-500'> 21st May, 2024 </p>
+              <p className='block text-xs text-gray-500'> {data.date}</p>
 
               <Link to={`/story/${data.id}`}>
                 <h3 className='mt-0.5 text-lg text-gray-900'>
